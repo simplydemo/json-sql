@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# json-sql
-This is easily access JSON messages through SQL query expressions.
-=======
 # json-sql-demo
 
 This is easily access JSON messages through SQL query expressions.
@@ -133,4 +129,3 @@ dependencies {
 
 - [json-sql](https://github.com/thenovaworks/json-sql.git)
 - [mvn-repository](https://mvnrepository.com/)
->>>>>>> 571d2f8 (project init)
