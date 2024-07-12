@@ -72,26 +72,25 @@ public void testCase() {
 
 Get the names of json properties by identifying them according to the hierarchy.
 
-
 ```java
 public void testCase() {
     String json = """
-    {
-      "id": "668feca3b450e6d8f583b561",
-      "index": 0,
-      "guid": "704a409d-e95d-4aca-bd46-782d050a9b77",
-      "isActive": false,
-      "age": 39,
-      "name": "Long Phillips",
-      "email": "longphillips@imant.com",
-      "registered": "2022-07-18T04:35:17 -09:00",
-      "detail": {
-          "category": "issue",
-          "code": "APPLE101",
-          "communicationId": "1234abc01232a4012345678-1"
-      }
-    }
-""";
+                {
+                  "id": "668feca3b450e6d8f583b561",
+                  "index": 0,
+                  "guid": "704a409d-e95d-4aca-bd46-782d050a9b77",
+                  "isActive": false,
+                  "age": 39,
+                  "name": "Long Phillips",
+                  "email": "longphillips@imant.com",
+                  "registered": "2022-07-18T04:35:17 -09:00",
+                  "detail": {
+                      "category": "issue",
+                      "code": "APPLE101",
+                      "communicationId": "1234abc01232a4012345678-1"
+                  }
+                }
+            """;
     String sql = "select id, guid, isActive, name, email from USER where id = '668feca3b450e6d8f583b561'";
     SqlSession sqlSession = new SqlSession(new JsonQueryHandler("user", json));
     System.out.println("keys: " + sqlSession.getKeys());
@@ -103,9 +102,10 @@ public void testCase() {
 
 To use [json-sql](https://github.com/thenovaworks/json-sql.git), simply add a dependency to your Maven or Gradle project.
 
-
 - Maven
+
 ```xml
+
 <dependencies>
     <dependency>
         <groupId>io.github.thenovaworks</groupId>
@@ -115,15 +115,13 @@ To use [json-sql](https://github.com/thenovaworks/json-sql.git), simply add a de
 </dependencies>
 ```
 
-
 - Gradle
 
-```
+```groovy
 dependencies {
     implementation 'io.github.thenovaworks:json-sql:1.0.0'
 }
 ```
-
 
 ## References
 
